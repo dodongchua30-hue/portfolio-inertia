@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Inter, ui-sans-serif, system-ui, 'Segoe UI', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+::selection {
+    background: #fff;
+    color: #000;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.text-shine {
+    background: linear-gradient(90deg, #fff 0%, #8f8f8f 50%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
